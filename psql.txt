@@ -29,6 +29,16 @@ psql> \c database_name;
 
 DROP TABLE "sample_property_5";
 
+\c  -- connect to database 
+\l  -- list all databases
+\q  -- quit
+\d  -- describe table 
+\x  -- toggle expanded output 
+       (That displays columns as rows and it's great for long rows)
+
+EXPLAIN ANALYZE -- add this in front of any query
+SELECT * FROM users WHERE id IN (1,3);
+
 
 
 
