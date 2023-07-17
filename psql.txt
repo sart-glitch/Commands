@@ -27,6 +27,9 @@ CREATE DATABASE annapurna_pay_db
 
 psql> \c database_name;
 
+DROP TABLE "sample_property_5";
+
+
 
 
 
