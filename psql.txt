@@ -25,4 +25,9 @@ CREATE ROLE admin WITH SUPERUSER CREATEDB CREATEROLE LOGIN ENCRYPTED PASSWORD â€
 CREATE DATABASE annapurna_pay_db
 \l
 
+psql> \c database_name;
+
+
+
+
 
