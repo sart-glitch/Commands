@@ -1,4 +1,4 @@
-aws iam delete-access-key --user-name TIF-USER-EKS --access-key-id AKIAYK2HF4C242RPWC3J --region ap-south-1  -- delete the accesskey of an user using cli
+aws iam delete-access-key --user-name killer-EKS --access-key-id AKIAYK2HF4C242RPWC3J --region ap-south-1  -- delete the accesskey of an user using cli
 
 aws rds modify-db-instance --db-instance-identifier prod-psql-read-replica --storage-type gp3 --allocated-storage 1500 --iops 12000 --apply-immediately  -- delete an rds or replica from the cli
 
