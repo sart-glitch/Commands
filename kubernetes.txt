@@ -1,0 +1,24 @@
+kubectl config delete-context my-cluster-context
+
+aws eks update-kubeconfig --region ap-south-1 --name <clustername>
+
+aws eks delete-cluster --name <cluster-name> --region ap-south-1
+
+helm ls -A
+
+helm install <releasename> . -f <valuesfile> -n <ns>
+
+helm upgrade --install <releasename> . -f <valuesfile> -n <ns>
+
+helm install <releasename> . -f <valuesfile> -n <ns> -f ../../<global-values-file-which is two steps backward> -n <ns>
+
+helm upgrade --install <releasename> . -f <valuesfile> -n <ns> -f ../../<global-values-file-which is two steps backward> -n <ns>
+
+eksctl create cluster -f <manifest.yaml>
+
+eksctl delete cluster -f <manifest.yaml>
+
+kubectl port-forward service/postgres-db-postgresql --address 0.0.0.0 5432:5432 -n db
+
+eksctl get nodegroup --cluster=<clustername> --region=ap-south-1
+
