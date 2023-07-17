@@ -1,0 +1,28 @@
+CREATE DATABASE yourdbname;
+CREATE USER youruser WITH ENCRYPTED PASSWORD 'yourpass';
+GRANT ALL PRIVILEGES ON DATABASE yourdbname TO youruser;
+
+
+CREATE DATABASE redash_uat
+GRANT ALL PRIVILEGES ON DATABASE "redash_uat" to ampladmin;
+GRANT SELECT ON ALL TABLES IN SCHEMA public to ampladmin;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO ampladmin;
+
+
+SELECT pg_size_pretty( pg_database_size('dbname') );  --> size of the database
+SELECT pg_size_pretty( pg_total_relation_size('ce_execution') ); --> size of the table
+check size of all tables at once: \dt+ (of a selected db)
+
+pg_dump --host hostname -U admin --password --exclude-table=query_results -d red > red.sql
+pg_dump --host hostname -U admin --password --table=query_results -d red > redschema.sql --schema-only
+psql -h hostname -U admin -d <db-name>
+
+CREATE ROLE amy123 LOGIN PASSWORD 'wR&9R';
+grant all privileges on database a_db to amy123;
+
+CREATE ROLE admin WITH SUPERUSER CREATEDB CREATEROLE LOGIN ENCRYPTED PASSWORD ‘WXIt';
+\du
+CREATE DATABASE annapurna_pay_db
+\l
+
+
