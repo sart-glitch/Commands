@@ -22,3 +22,15 @@ kubectl port-forward service/postgres-db-postgresql --address 0.0.0.0 5432:5432 
 
 eksctl get nodegroup --cluster=<clustername> --region=ap-south-1
 
+eksctl create nodegroup -f testing-cluster.yaml    --> just create the nodegroup when the cluster is created
+
+eksctl delete nodegroup --cluster IPV6-sarthak --region ap-south-1 --name  Final-test-NG1
+
+eksctl delete nodegroup --cluster=clustername --name=nodegroupname --region ap-south-1
+
+eksctl delete nodegroup --cluster=Dev-cluster --name=Dev-Monitoring --region ap-south-1 --disable-eviction
+
+alb.ingress.kubernetes.io/group.name: sarthak    --> annotation for the single load balancer
+
+
+
