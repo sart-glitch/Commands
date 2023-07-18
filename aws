@@ -6,3 +6,7 @@ delete route53 hosted zone:   aws route53 delete-hosted-zone --id Z09907962SDJTN
 
 aws acm delete-certificate --certificate-arn arn:aws:acm:ap-south-1:860269274803:certificate/34b5efb8-ec8d-4b18-8824-3dabf7ccb24c  -- delete acm
 
+aws ec2 delete-volume --volume-id vol-049df61146c4d7901 --region ap-south-1 -- delete volume
+
+aws ec2 delete-snapshot --snapshot-id snap-1234567890abcdef0  -- delete snapshot
+
