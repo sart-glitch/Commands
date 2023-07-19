@@ -10,3 +10,7 @@ aws ec2 delete-volume --volume-id vol-049df61146c4d7901 --region ap-south-1 -- d
 
 aws ec2 delete-snapshot --snapshot-id snap-1234567890abcdef0  -- delete snapshot
 
+aws rds delete-db-instance --db-instance-identifier database-1 --skip-final-snapshot --delete rds 
+
+aws rds delete-db-snapshot     --db-snapshot-identifier database-1-snapshot
+
