@@ -14,3 +14,5 @@ aws rds delete-db-instance --db-instance-identifier database-1 --skip-final-snap
 
 aws rds delete-db-snapshot     --db-snapshot-identifier database-1-snapshot
 
+aws codecommit delete-repository --repository-name MyDemoRepo
+
