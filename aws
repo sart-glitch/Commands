@@ -18,3 +18,5 @@ aws codecommit delete-repository --repository-name MyDemoRepo
 
 aws ec2 delete-security-group --group-id sg-903004f8  --> delete the security group
 
+aws s3api delete-object --bucket my-bucket --key test.txt  --> delete object from an bucket
+
