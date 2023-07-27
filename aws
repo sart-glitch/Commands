@@ -16,3 +16,5 @@ aws rds delete-db-snapshot     --db-snapshot-identifier database-1-snapshot
 
 aws codecommit delete-repository --repository-name MyDemoRepo
 
+aws ec2 delete-security-group --group-id sg-903004f8  --> delete the security group
+
