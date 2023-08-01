@@ -20,3 +20,5 @@ aws ec2 delete-security-group --group-id sg-903004f8  --> delete the security gr
 
 aws s3api delete-object --bucket my-bucket --key test.txt  --> delete object from an bucket
 
+aws eks describe-addon-versions | jq -r ".addons[] | .addonVersions[] | .compatibilities[] | .clusterVersion" | sort | uniq  --> see all the eks versions
+
