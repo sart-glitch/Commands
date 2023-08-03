@@ -23,3 +23,5 @@ aws s3api delete-object --bucket my-bucket --key test.txt  --> delete object fro
 aws eks describe-addon-versions | jq -r ".addons[] | .addonVersions[] | .compatibilities[] | .clusterVersion" | sort | uniq  --> see all the eks versions
 
 aws eks describe-cluster --name AMPL-Prod --region ap-south-1 --query 'cluster.version' --> check the current version of eks cluster
+
+aws ses delete-identity --identity user@example.com  --> delete verified identities
