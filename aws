@@ -27,3 +27,5 @@ aws eks describe-cluster --name AMPL-Prod --region ap-south-1 --query 'cluster.v
 aws ses delete-identity --identity user@example.com  --> delete verified identities
 
 aws iam delete-user --user-name Bob
+
+aws iam delete-user-policy --user-name Bob --policy-name ExamplePolicy
