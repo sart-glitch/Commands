@@ -25,3 +25,5 @@ aws eks describe-addon-versions | jq -r ".addons[] | .addonVersions[] | .compati
 aws eks describe-cluster --name AMPL-Prod --region ap-south-1 --query 'cluster.version' --> check the current version of eks cluster
 
 aws ses delete-identity --identity user@example.com  --> delete verified identities
+
+aws iam delete-user --user-name Bob
