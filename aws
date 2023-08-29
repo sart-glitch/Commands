@@ -31,3 +31,7 @@ aws iam delete-user --user-name Bob
 aws iam delete-user-policy --user-name Bob --policy-name ExamplePolicy
 
 aws iam delete-policy-version --policy-arn arn:aws:iam::123456789012:policy/MyPolicy --version-id v2
+
+aws ecr delete-repository \
+    --repository-name ubuntu \
+    --force
