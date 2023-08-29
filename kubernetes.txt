@@ -50,6 +50,7 @@ kubectl get pods -n kube-system -l app.kubernetes.io/name=aws-ebs-csi-driver
 helm history <release-name> -n <namespace>
 
 helm rollback <release-name> -n <namespace> <revision number>
+-----------------------------
 
 
 
