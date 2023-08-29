@@ -35,3 +35,5 @@ aws iam delete-policy-version --policy-arn arn:aws:iam::123456789012:policy/MyPo
 aws ecr delete-repository \
     --repository-name ubuntu \
     --force
+
+git remote set-url --push origin https://<username>:<password>@github.com/<repo>
