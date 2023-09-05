@@ -37,3 +37,5 @@ aws ecr delete-repository \
     --force
 
 git remote set-url --push origin https://<username>:<password>@github.com/<repo>
+
+aws ecr describe-repositories --query 'repositories[*].repositoryName' --output text
