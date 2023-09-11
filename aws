@@ -39,3 +39,5 @@ aws ecr delete-repository \
 git remote set-url --push origin https://<username>:<password>@github.com/<repo>
 
 aws ecr describe-repositories --query 'repositories[*].repositoryName' --output text
+
+aws ec2 describe-volumes --filters "Name=status,Values=available" --query 'Volumes[*].{ID:VolumeId,State:State}'
