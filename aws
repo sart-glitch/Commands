@@ -41,3 +41,5 @@ git remote set-url --push origin https://<username>:<password>@github.com/<repo>
 aws ecr describe-repositories --query 'repositories[*].repositoryName' --output text
 
 aws ec2 describe-volumes --filters "Name=status,Values=available" --query 'Volumes[*].{ID:VolumeId,State:State}'
+
+aws s3api delete-objects --bucket my-bucket --delete file://delete.json  -- delete the object of the bucket
