@@ -39,6 +39,21 @@ DROP TABLE "sample_property_5";
 EXPLAIN ANALYZE -- add this in front of any query
 SELECT * FROM users WHERE id IN (1,3);
 
+=========================================================
+Connections used and pending
+============================
+select  * from(select count(*) used from pg_stat_activity) q1,
+(select setting::int res_for_super from pg_settings where name=$$superuser_reserved_connections$$) q2,
+(select setting::int max_conn from pg_settings where name=$$max_connections$$) q3;
+
+Number of connections Database wise
+===================================
+SELECT datname, COUNT(datid) FROM pg_stat_activity GROUP BY datname;
+
+close all the connections of a db
+=================================
+SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pg_stat_activity.datname = 'uat_iam2' AND pid <> pg_backend_pid();
+
 
 
 
