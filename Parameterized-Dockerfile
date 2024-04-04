@@ -1,0 +1,31 @@
+# Use a base image
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
+ 
+# Set environment variables
+ARG ENVIRONMENT
+ENV ENVIRONMENT ${ENVIRONMENT}
+ 
+# Add your application files
+COPY . /app
+ 
+# Set up your application
+WORKDIR /app
+ 
+# Example: Depending on the environment, you might run different commands
+RUN if [ "${ENVIRONMENT}" = "production" ]; then \
+    npm install --production; \
+    else \
+    npm install; \
+    fi
+ 
+# Example: Depending on the environment, expose different ports
+# This is just an illustrative example; modify as needed
+EXPOSE ${ENVIRONMENT === "production" ? "80" : "3000"}
+ 
+# Define the command to run your application
+CMD ["npm", "start"]
+ 
+ 
+====
+docker build --build-arg BASE_IMAGE=<base_image> --build-arg ENVIRONMENT=<environment> -t myimage .
