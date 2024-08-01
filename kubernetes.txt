@@ -20,6 +20,8 @@ eksctl delete cluster -f <manifest.yaml>
 
 kubectl port-forward service/postgres-db-postgresql --address 0.0.0.0 5432:5432 -n db
 
+kubectl port-forward pod/keycloak-jaskfj --address 0.0.0.0 8082:8080 -n uat
+
 eksctl get nodegroup --cluster=<clustername> --region=ap-south-1
 
 eksctl create nodegroup -f testing-cluster.yaml    --> just create the nodegroup when the cluster is created
